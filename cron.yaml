@@ -1,0 +1,5 @@
+cron:
+- description: Data fetch and observe data
+  url: /cron/data_update
+  schedule: every 1 mins from 06:00 to 22:00
+  timezone: Asia/Seoul

@@ -1,0 +1,36 @@
+application: aerial-ceremony-95901
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /request/room_list
+  script: handlers.app
+
+- url: /request/room_detail
+  script: handlers.app
+
+- url: /cron/data_update
+  script: handlers.app
+
+- url: /cron/manage_resource
+  script: handlers.app
+
+- url: /_ah/spi/.*
+  script: library.api
+  secure: always
+
+libraries:
+- name: endpoints
+  version: latest
+
+- name: lxml
+  version: latest
+
+- name: webapp2
+  version: latest

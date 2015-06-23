@@ -31,7 +31,7 @@ class Room1 implements RoomModelInterface {
 
 		this.rowFactories = [];
 		for (var index = 0; index < row_numbers.length; index++) {
-			this.rowFactories.push = new RowFactory(row_numbers[index], row_increases[index]);
+			this.rowFactories.push(new RowFactory(row_numbers[index], row_increases[index]));
 		}
 		this.rowIndexes = [0, 0, 6];
 		this.rowSizes = [5, 4, 3];
@@ -41,7 +41,7 @@ class Room1 implements RoomModelInterface {
 
 		this.colFactories = [];
 		for (var index = 0; index < col_numbers.length; index++) {
-			this.colFactories.push = new ColFactory(col_numbers[index], col_sizes[index]);
+			this.colFactories.push(new ColFactory(col_numbers[index], col_sizes[index]));
 		}
 		this.colIndexes = [0, 1, 3, 4, 6, 7, 9, 10];
 	}	
@@ -75,7 +75,7 @@ class Room2 implements RoomModelInterface {
 
 		this.rowFactories = [];
 		for (var index = 0; index < row_numbers.length; index++) {
-			this.rowFactories.push = new RowFactory(row_numbers[index], row_increases[index]);
+			this.rowFactories.push(new RowFactory(row_numbers[index], row_increases[index]));
 		}
 		this.rowIndexes = [0, 6, 11, 16, 19, 19, 12];
 		this.rowSizes = [5, 4, 4, 3, 1, 2, 9];
@@ -85,7 +85,7 @@ class Room2 implements RoomModelInterface {
 
 		this.colFactories = [];
 		for (var index = 0; index < col_numbers.length; index++) {
-			this.colFactories.push = new ColFactory(col_numbers[index], col_sizes[index]);
+			this.colFactories.push(new ColFactory(col_numbers[index], col_sizes[index]));
 		}
 		this.colIndexes = [0, 1, 3, 4, 6, 7, 9, 10];
 	}

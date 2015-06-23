@@ -11,7 +11,7 @@ var Room1 = (function () {
         row_increases.push([true, false, true, false, true, false, true, false]);
         this.rowFactories = [];
         for (var index = 0; index < row_numbers.length; index++) {
-            this.rowFactories.push = new RowFactory(row_numbers[index], row_increases[index]);
+            this.rowFactories.push(new RowFactory(row_numbers[index], row_increases[index]));
         }
         this.rowIndexes = [0, 0, 6];
         this.rowSizes = [5, 4, 3];
@@ -19,7 +19,7 @@ var Room1 = (function () {
         var col_sizes = [8, 8, 8, 8, 8, 8, 3, 3];
         this.colFactories = [];
         for (var index = 0; index < col_numbers.length; index++) {
-            this.colFactories.push = new ColFactory(col_numbers[index], col_sizes[index]);
+            this.colFactories.push(new ColFactory(col_numbers[index], col_sizes[index]));
         }
         this.colIndexes = [0, 1, 3, 4, 6, 7, 9, 10];
     }
@@ -45,7 +45,7 @@ var Room2 = (function () {
         row_increases.push([true, false, true, false]);
         this.rowFactories = [];
         for (var index = 0; index < row_numbers.length; index++) {
-            this.rowFactories.push = new RowFactory(row_numbers[index], row_increases[index]);
+            this.rowFactories.push(new RowFactory(row_numbers[index], row_increases[index]));
         }
         this.rowIndexes = [0, 6, 11, 16, 19, 19, 12];
         this.rowSizes = [5, 4, 4, 3, 1, 2, 9];
@@ -53,7 +53,7 @@ var Room2 = (function () {
         var col_sizes = [8, 8, 8, 8, 8, 8, 3, 3];
         this.colFactories = [];
         for (var index = 0; index < col_numbers.length; index++) {
-            this.colFactories.push = new ColFactory(col_numbers[index], col_sizes[index]);
+            this.colFactories.push(new ColFactory(col_numbers[index], col_sizes[index]));
         }
         this.colIndexes = [0, 1, 3, 4, 6, 7, 9, 10];
     }

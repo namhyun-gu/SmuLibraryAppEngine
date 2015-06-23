@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load webcomponents-lite.min.js for polyfill support. -->
+    <script type="text/javascript" src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <!-- Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="element/seat-element.html">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/layout_seats.css" type="text/css">
+</head>
+<body>
+    <div id="container"></div>
+
+    <script src="javascript/seats-controller.js"></script>
+    <script src="javascript/seats-config.js"></script>
+    <script src="javascript/seats-drawer.js"></script>
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\["   ).replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+            return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var paramIndexValue = getParameterByName('index');
+        if(paramIndexValue == null) {
+            console.log("Can't draw layout. Not exist index value");
+        } else {
+            draw(paramIndexValue);
+        }
+    </script>
+</body>
+</html>

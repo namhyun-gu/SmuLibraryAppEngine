@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<dom-module id="seat-element" >
+	<style type="text/css">
+		paper-ripple{
+			border-radius: 4px;
+		}
+
+		paper-material {
+			border-radius: 4px;
+		}
+
+		div {
+			font-family: 'Roboto';
+			font-weight: 400;
+			width: 48px;
+    		height: 40px;
+    		line-height: 40px;
+    		text-align: center;
+    		color: black;
+    	}
+	</style>
+	<template>
+		<paper-material elevation="1">
+			<div>{{number}}<paper-ripple fit></paper-ripple></div>
+		</paper-material>
+	</template>
+	<script>
+		Polymer({
+			is: "seat-element",
+			properties: {
+        		number: {
+          			type: String,
+          			value: "0"
+        		}
+      		}
+		});
+	</script>
+</dom-module>

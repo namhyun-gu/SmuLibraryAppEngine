@@ -1,0 +1,8 @@
+@import "seats_position.css";
+
+paper-button {
+    position: absolute;
+    width: 40px;
+    height: 32px;
+    color: black;
+}

@@ -1,24 +1,13 @@
 #!/usr/bin/env python
-import warnings
-
 __author__ = 'namhyun'
-import sys
-# Import Third Party Library
-sys.path.insert(0, 'libs')
-
-import yaml
-import json
 import keys
-from lxml import html
-import logging
+import json
 import time
+import logging
+import crawler
 from datetime import datetime, timedelta, tzinfo
-from bs4 import BeautifulSoup
-from models import Room, RoomDetail, RoomList, Seat
-from google.appengine.api import urlfetch, memcache
-
-# urlfetch config
-DEADLINE_CAPACITY = 5
+from models import *
+from google.appengine.api import memcache
 
 
 class KST(tzinfo):
@@ -35,15 +24,60 @@ class KST(tzinfo):
 class Util:
     @staticmethod
     def get_date():
-        timezone_kst = KST()
-        return datetime.now(timezone_kst).strftime('%Y-%m-%d %H:%M')
+        return datetime.now(KST()).strftime('%Y-%m-%d %H:%M')
+
+    @staticmethod
+    def to_json(data):
+        return json.dumps(data, ensure_ascii=False, default=lambda o: o.__dict__)
+
+    @staticmethod
+    def from_json(json_data, type):
+        json_object = json.loads(json_data)
+        if type == RoomList:
+            room_lists = []
+            room_lists_data = json_data['room_list']
+            for room_info in room_lists_data:
+                room_object = Room()
+                room_object.name = room_info['name']
+                room_object.seat_capacity = room_info['seat_capacity']
+                room_object.used_seat = room_info['used_seat']
+                room_object.available_seat = room_info['available_seat']
+                room_lists.append(room_object)
+
+            room_list_object = RoomList()
+            room_list_object.update_date = json_data['update_date']
+            room_list_object.room_list = room_lists
+            room_list_object.room_size = json_data['room_size']
+            return room_list_object
+
+        elif type == RoomDetail:
+            seat_lists = []
+            seat_lists_data = json_object['seat_list']
+            for seat_data in seat_lists_data:
+                seat_object = Seat()
+                seat_object.seat_number = seat_data['seat_number']
+                seat_object.is_available = seat_data['is_available']
+                seat_lists.append(seat_object)
+
+            room_data = json_object['room_object']
+            room_object = Room()
+            room_object.name = room_data['name']
+            room_object.seat_capacity = room_data['seat_capacity']
+            room_object.used_seat = room_data['used_seat']
+            room_object.available_seat = room_data['available_seat']
+
+            room_detail_object = RoomDetail()
+            room_detail_object.update_date = json_object['update_date']
+            room_detail_object.room_object = room_object
+            room_detail_object.seat_list = seat_lists
+            return room_detail_object
+
 
 class Timer:
     start_time = None
 
     def __init__(self):
         self.start_time = time.time()
-        pass
 
     def stop(self):
         return time.time() - self.start_time
@@ -51,98 +85,60 @@ class Timer:
     def start(self):
         self.start_time = time.time()
 
-class Observable:
-    crawler = None
-    cache_key = None
 
-    def __init__(self, crawler, key):
-        self.crawler = crawler
-        self.cache_key = key
-        self.__observe()
+class ObserveService:
+    observe_data = None
+    observe_type = None
+    observe_room_index = None
 
-    def __observe(self):
-        crawler_data = self.crawler.request_data()
+    def __init__(self, observe_data, type, room_index=None):
+        self.observe_data = observe_data
+        self.observe_type = type
+        self.observe_room_index = room_index
 
-        cache_data = memcache.get(self.cache_key)
-        cache_json_object = yaml.load(cache_data)
+    def observe(self):
+        if self.observe_type == crawler.RoomListCrawler:
+            memcache_data = memcache.get(keys.ROOM_LIST_KEY)
+            if memcache_data is None:
+                return
+            room_list_object = Util.from_json(memcache_data, RoomList)
 
-        if isinstance(self.crawler, RoomListCrawler):
-            pass
+            # logging.info(room_list_object)
 
-class RoomListCrawler:
-    # Service URL
-    service_url = 'http://203.237.174.66/domian5.asp'
-    urlfetch_object = None
+        elif self.observe_type == crawler.RoomDetailCrawler:
+            if self.observe_room_index is None:
+                return
+            memcache_data = memcache.get(keys.ROOM_KEY % self.observe_room_index)
+            if memcache_data is None:
+                return
+            observe_seat_list = Util.from_json(memcache_data, RoomDetail).seat_list
+            cached_seat_list = observe_seat_list
+            changed_seat_list = []
+            for index in range(0, len(cached_seat_list)):
+                cached_seat = cached_seat_list[index]
+                observe_seat = self.observe_data.seat_list[index]
+                if cached_seat.__is_available != observe_seat.__is_available:
+                    changed_seat_list.append(observe_seat)
+            self._notify(changed_seat_list)
 
-    # Crawler Config
-    room_start_index = 3
-    room_size = 6
+    def _notify(self, dataset):
+        if not dataset:
+            return
 
-    def fetch(self):
-        self.urlfetch_object = urlfetch.fetch(self.service_url, deadline=DEADLINE_CAPACITY)
-        return self
+        if self.observe_type == crawler.RoomDetailCrawler:
+            change_available_seats = []
+            for seat in dataset:
+                if seat.__is_available:
+                    change_available_seats.append(seat)
+            logging.info(change_available_seats)
 
-    def request_data(self):
-        if self.urlfetch_object is None:
-            return None
 
-        soup = BeautifulSoup(self.urlfetch_object.content, "lxml", from_encoding="euc-kr")
-        room_list = []
-        tr_tags = soup.find_all('tr')
-        for index in range(self.room_start_index, self.room_start_index + self.room_size):
-            font_tag = tr_tags[index].find_all('font')
+class GCMService:
+    api_key = None
+    headers = None
 
-            room = Room().room_name(font_tag[1].text) \
-                .capacity(font_tag[2].text) \
-                .used(font_tag[3].text) \
-                .caculate()
-            room_list.append(room)
-        room_list_object = RoomList().size(self.room_size).date(Util.get_date()).rooms(room_list)
-        return room_list_object
-
-class RoomDetailCrawler:
-    # Service URL
-    service_url = 'http://203.237.174.66/roomview5.asp?room_no=%d'
-    urlfetch_object = None
-
-    # Crawler Config
-    room_index = 0
-    room_object = None
-
-    def set_room(self, room_object, index):
-        self.room_object = room_object
-        self.room_index = index
-
-    def fetch(self):
-        self.urlfetch_object = urlfetch.fetch(self.service_url % self.room_index, deadline=DEADLINE_CAPACITY)
-        return self
-
-    def request_data(self):
-        if self.urlfetch_object is None:
-            return None
-
-        tree = html.fromstring(self.urlfetch_object.content)
-        seat_list = []
-        for seat_index in range(1, self.room_object.seat_capacity + 1):
-            seat_attr_id = 'Layer%d' % seat_index
-            seat_tag = tree.xpath("//div[@id='%s']" % seat_attr_id)
-            table_tag = seat_tag[0].getchildren()[0]
-            tr_tag = table_tag.getchildren()[0]
-            td_tag = tr_tag.getchildren()[0]
-            seat = Seat().number(seat_index).available(self.is_available(td_tag))
-            seat_list.append(seat)
-        room_detail_object = RoomDetail().date(Util.get_date()).room(self.room_object).seats(seat_list)
-        return room_detail_object
-
-    def is_available(self, tag):
-        """
-        Check seat available from tag 'bgcolor' attribute
-
-        'gray' : available
-        'red' : not available
-
-        :param tag:
-        :return: boolean
-        """
-        bgcolor_attr = tag.attrib['bgcolor']
-        return bgcolor_attr == 'gray'
+    def __init__(self, api_key):
+        self.api_key = api_key
+        self.headers = {
+            'Authorization': 'key=%s' % self.api_key,
+        }

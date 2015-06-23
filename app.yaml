@@ -9,6 +9,12 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /bower_components
+  static_dir: bower_components
+
+- url: /template
+  static_dir: template
+
 - url: /request/room_list
   script: handlers.app
 

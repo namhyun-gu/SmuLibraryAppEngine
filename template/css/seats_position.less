@@ -1,0 +1,24 @@
+@layout_default_top: 0px;
+@layout_default_left: 0px;
+
+@layout_margin_row: 40px;
+@layout_margin_col: 40px;
+
+@row_size: 19;
+@col_size: 20;
+
+.rowLoopingClass (@index) when (@index < @row_size) {
+    .row_@{index} {
+        top: @layout_default_top + (@layout_margin_row * @index);
+    }
+    .rowLoopingClass(@index + 1);
+}
+.rowLoopingClass (0);
+
+.colLoppingClass (@index) when (@index < @col_size) {
+    .col_@{index} {
+        left: @layout_default_left + (@layout_margin_col * @index);
+    }
+    .colLoppingClass(@index + 1);
+}
+.colLoppingClass (0);

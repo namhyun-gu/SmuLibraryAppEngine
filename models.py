@@ -73,12 +73,12 @@ class RoomDetail:
 
 class Seat:
     seat_number = 0
-    seat_available = False
+    is_available = False
 
     def number(self, number):
         self.seat_number = number
         return self
 
     def available(self, available):
-        self.seat_available = available
+        self.is_available = available
         return self

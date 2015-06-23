@@ -7,14 +7,15 @@
 <dom-module id="seat-element" >
 	<style type="text/css">
 		paper-ripple{
-			border-radius: 4px;
+			border-radius: 8px;
 		}
 
 		paper-material {
-			border-radius: 4px;
+			border-radius: 8px;
 		}
 
 		div {
+			border-radius: 8px;
 			font-family: 'Roboto';
 			font-weight: 400;
 			width: 48px;
@@ -23,10 +24,19 @@
     		text-align: center;
     		color: black;
     	}
+
+    	.available {
+    		background-color: #FAFAFA;
+    	}
+
+    	.unavailable {
+    		background-color: #FF5252;
+    		color: #ffffff;
+    	}
 	</style>
 	<template>
 		<paper-material elevation="1">
-			<div>{{number}}<paper-ripple fit></paper-ripple></div>
+			<div class$="{{getStatusClass(status)}}">{{number}}<paper-ripple fit></paper-ripple></div>
 		</paper-material>
 	</template>
 	<script>
@@ -34,9 +44,21 @@
 			is: "seat-element",
 			properties: {
         		number: {
-          			type: String,
-          			value: "0"
+          			type: String
+        		},
+        		status: {
+        			type: Boolean,
+        			value: true
         		}
+      		},
+      		getStatusClass: function (status) {
+      			if(status == true)
+      				return 'available';
+      			else
+      				return 'unavailable';
+      		},
+      		changeStatus: function(status) {
+      			this.status = status;
       		}
 		});
 	</script>

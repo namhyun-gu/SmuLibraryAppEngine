@@ -5,16 +5,50 @@
  * Created by namhyun on 2015-06-22.
  */
 function draw(index) {
-    var room_seats_size = 0;
+    var config = null;
     if (index == 1) {
-        room_seats_size = 52;
+        config = new Room1();
     }
     else if (index == 2) {
-        room_seats_size = 208;
+        config = new Room2();
     }
-    drawSeats(room_seats_size);
-    updateSeatsStatus(index);
-    alignSeats(index);
+    else if (index == 6) {
+        config = new Room6();
+    }
+    if (config != null) {
+        drawEntry(config.entryMark);
+        drawSeats(config.seatSize);
+        updateSeatsStatus(index);
+        alignSeats(config);
+    }
+    else {
+        $.ajax({
+            url: './layout/layout_' + index + '.json',
+            success: function (data) {
+                var obj = JSON.parse(data);
+                var entry = obj.entryMark;
+                var entryMark = new EntryMark(entry.rowIndex, entry.colIndex, entry.arrowRotate);
+                drawEntry(entryMark);
+                drawSeats(Number(obj.seatSize));
+                for (var i in obj.seats) {
+                    var seat = obj.seats[i];
+                    SeatController.alignSeat(seat.seatNumber, seat.rowIndex, seat.colIndex);
+                }
+                updateSeatsStatus(index);
+            }
+        });
+    }
+}
+function drawEntry(entryMark) {
+    if (entryMark == null)
+        return null;
+    var iconName = "arrow-drop-down";
+    if (entryMark.arrowRotate) {
+        iconName = "arrow-drop-up";
+    }
+    $('#container').append('<div id=entry-mark><iron-icon icon=' + iconName + '></iron-icon>출입구</div>');
+    $('#entry-mark').addClass('row_' + entryMark.rowIndex);
+    $('#entry-mark').addClass('col_' + entryMark.colIndex);
 }
 function drawSeats(size) {
     for (var i = 1; i <= size; i++) {
@@ -35,16 +69,13 @@ function updateSeatsStatus(index) {
         }
     });
 }
-function alignSeats(index) {
-    var config;
-    if (index == 1) {
-        config = new Room1();
-    }
-    else if (index == 2) {
-        config = new Room2();
-    }
-    for (var index = 0; index < config.rowFactories.length; index++)
-        SeatController.repeatAlign(config.rowFactories[index], config.rowIndexes[index], config.rowSizes[index]);
-    for (var index = 0; index < config.colFactories.length; index++)
-        SeatController.repeatAlign(config.colFactories[index], config.colIndexes[index]);
+function alignSeats(config) {
+    // Align Row
+    var rowProperty = config.rowProperty;
+    var colProperty = config.colProperty;
+    for (var index = 0; index < rowProperty.rowFactories.length; index++)
+        SeatController.repeatAlign(rowProperty.rowFactories[index], rowProperty.rowIndexes[index], rowProperty.rowSizes[index]);
+    for (var index = 0; index < colProperty.colFactories.length; index++)
+        SeatController.repeatAlign(colProperty.colFactories[index], colProperty.colIndexes[index]);
 }
+//# sourceMappingURL=seat-drawer.js.map

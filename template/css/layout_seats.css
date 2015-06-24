@@ -3,3 +3,10 @@
 seat-element {
     position: absolute;
 }
+
+#entry-mark {
+    width: 96px;
+    position: absolute;
+    text-align: center;
+    font-family: 'Jeju Gothic', sans-serif;
+}

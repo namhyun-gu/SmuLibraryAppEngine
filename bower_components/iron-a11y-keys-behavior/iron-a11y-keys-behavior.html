@@ -116,7 +116,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var IDENT_CHAR = /U\+/;
 
     /**
-     * Matches arrow keys in Gecko 27.0+
+     * Matches arrowRotate keys in Gecko 27.0+
      */
     var ARROW_KEY = /^arrow/;
 
@@ -135,7 +135,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             validKey = lKey;
           }
         } else if (ARROW_KEY.test(lKey)) {
-          validKey = lKey.replace('arrow', '');
+          validKey = lKey.replace('arrowRotate', '');
         } else if (SPACE_KEY.test(lKey)) {
           validKey = 'space';
         } else if (lKey == 'multiply') {

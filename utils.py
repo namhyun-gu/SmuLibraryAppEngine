@@ -55,7 +55,7 @@ class Util:
             seat_lists_data = json_object['seat_list']
             for seat_data in seat_lists_data:
                 seat_object = Seat()
-                seat_object.seat_number = seat_data['seat_number']
+                seat_object.seat_number = seat_data['seatNumber']
                 seat_object.is_available = seat_data['is_available']
                 seat_lists.append(seat_object)
 

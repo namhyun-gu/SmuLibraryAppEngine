@@ -5,29 +5,64 @@
 /**
  * Created by namhyun on 2015-06-22.
  */
-function draw(index: number) : void {
-	var room_seats_size = 0;
+function draw(index:number):void {
+    var config:RoomModel = null;
     if (index == 1) {
-        room_seats_size = 52;
+        config = new Room1();
     } else if (index == 2) {
-        room_seats_size = 208;
+        config = new Room2();
+    } else if (index == 6) {
+        config = new Room6();
     }
-    drawSeats(room_seats_size);
-    updateSeatsStatus(index);
-    alignSeats(index);
+
+    if (config != null) {
+        drawEntry(config.entryMark);
+        drawSeats(config.seatSize);
+        updateSeatsStatus(index);
+        alignSeats(config);
+    } else {
+        $.ajax({
+            url: './layout/layout_' + index + '.json',
+            success: function (data) {
+                var obj = JSON.parse(data);
+                var entry = obj.entryMark;
+                var entryMark = new EntryMark(entry.rowIndex, entry.colIndex, entry.arrowRotate);
+                drawEntry(entryMark);
+                drawSeats(Number(obj.seatSize));
+                for (var i in obj.seats) {
+                    var seat = obj.seats[i];
+                    SeatController.alignSeat(seat.seatNumber, seat.rowIndex, seat.colIndex);
+                }
+                updateSeatsStatus(index);
+            }
+        });
+    }
 }
 
-function drawSeats(size: number) : void {
+function drawEntry(entryMark:EntryMark):void {
+    if (entryMark == null)
+        return null;
+
+    var iconName:string = "arrow-drop-down";
+    if (entryMark.arrowRotate) {
+        iconName = "arrow-drop-up";
+    }
+    $('#container').append('<div id=entry-mark><iron-icon icon=' + iconName + '></iron-icon>출입구</div>');
+    $('#entry-mark').addClass('row_' + entryMark.rowIndex);
+    $('#entry-mark').addClass('col_' + entryMark.colIndex);
+}
+
+function drawSeats(size:number):void {
     for (var i = 1; i <= size; i++) {
         $('#container').append('<seat-element number=' + i + ' id=Seat' + i + '></seat-element>');
     }
 }
 
-function updateSeatsStatus(index: number) : void {
+function updateSeatsStatus(index:number):void {
     $.ajax({
         url: '../request/room_detail?index=' + index,
-        success: function(data) {
-            for(var index in data.seat_list) {
+        success: function (data) {
+            for (var index in data.seat_list) {
                 var seat = data.seat_list[index];
                 var number = seat.seat_number;
                 var is_available = seat.is_available;
@@ -39,16 +74,17 @@ function updateSeatsStatus(index: number) : void {
     });
 }
 
-function alignSeats(index: number): void {
-    var config: RoomModelInterface;
-    if (index == 1) {
-        config = new Room1();
-    } else if (index == 2) {
-        config = new Room2();
-    }
+function alignSeats(config:RoomModel):void {
+    // Align Row
+    var rowProperty = config.rowProperty;
+    var colProperty = config.colProperty;
 
-    for (var index = 0; index < config.rowFactories.length; index++)
-        SeatController.repeatAlign(config.rowFactories[index], config.rowIndexes[index], config.rowSizes[index]);
-    for (var index = 0; index < config.colFactories.length; index++)
-        SeatController.repeatAlign(config.colFactories[index], config.colIndexes[index]);
+    for (var index = 0; index < rowProperty.rowFactories.length; index++)
+        SeatController.repeatAlign(rowProperty.rowFactories[index],
+            rowProperty.rowIndexes[index],
+            rowProperty.rowSizes[index]);
+
+    // Align Col
+    for (var index = 0; index < colProperty.colFactories.length; index++)
+        SeatController.repeatAlign(colProperty.colFactories[index], colProperty.colIndexes[index]);
 }

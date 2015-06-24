@@ -78,6 +78,8 @@ class ListRequestHandler(webapp2.RequestHandler):
             self.response.status = 404
         else:
             self.response.headers['content-Type'] = 'application/json'
+            self.response.headers['Access-Control-Allow-Origin']= '*'
+            self.response.headers['Access-Control-Allow-Headers'] = "origin, x-requested-with, content-type, accept"
             self.response.out.write(data)
 
 class DetailRequestHandler(webapp2.RequestHandler):
@@ -88,6 +90,8 @@ class DetailRequestHandler(webapp2.RequestHandler):
             self.response.status = 404
         else:
             self.response.headers['content-Type'] = 'application/json'
+            self.response.headers['Access-Control-Allow-Origin']= '*'
+            self.response.headers['Access-Control-Allow-Headers'] = "origin, x-requested-with, content-type, accept"
             self.response.out.write(data)
 
 

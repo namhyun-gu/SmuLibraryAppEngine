@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Smu Library</title>
+        <meta name="description" content="Library web application for Sangmyung Univ.">
+        <!-- Mobile -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <!-- Chrome / Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#3F51B5">
+        <link rel="icon" href="icon.png">
+        <!-- Safari / iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+        <!-- Web Components -->
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel="import" href="element/room-list.html">
+    </head>
+    <body unresolved class="fullbleed layout vertical">
+    	<paper-header-panel class="flex">
+    	  <paper-toolbar>
+    	  	<div class="title">Smu Library</div>
+    	  	<div span></div>
+    	  	<paper-icon-button icon="translate"></paper-icon-button>
+    	  </paper-toolbar>
+          <div class="content">
+		      <room-list></room-list>
+          </div>
+    	</paper-header-panel>
+    	<script type="text/javascript" src="script/app.js"></script>
+    </body>
+</html>

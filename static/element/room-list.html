@@ -1,0 +1,71 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/paper-ripple/paper-ripple.html">
+
+<dom-module id="room-list">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+            paper-material {
+                border-radius: 4px;
+                margin-bottom: 16px;
+                background-color: white;
+            }
+
+            .content {
+                border-radius: 4px;
+            	min-height: 48px;
+                text-align: left;
+                padding: 16px 16px 16px 16px;
+            }
+
+            .itemTitle {
+                font-size: 20px;
+                vertical-align: middle;
+            }
+
+            .itemSubTitle {
+                margin-top: 4px;
+            }
+
+            .itemHightlight {
+                color: #FF4081;
+            }
+        </style>
+        <template is="dom-repeat" items="{{data.room_list}}">
+        	   <paper-material elevation="1">
+                    <div class="content" layout vertical>
+                        <span class="itemTitle">{{item.name}}</span>
+                        <div class="itemSubTitle layout horizontal">
+                            <span class="itemHightlight">{{item.used_seat}}</span>    
+                            <span>&nbsp;/&nbsp;</span>
+                            <span>{{item.seat_capacity}}</span>
+                            <span>&nbsp;(</span>
+                            <span>{{getUsedPercent(item.used_seat, item.seat_capacity)}}</span>
+                            <span>%)</span>
+                        </div>
+                        <paper-ripple fit></paper-ripple>
+                    </div>
+        	   </paper-material>
+        </template>
+        <iron-ajax
+			auto
+			url="../../request/room_list"
+			handle-as="json"
+			last-response="{{data}}"></iron-ajax>
+    </template>
+    <script>
+        Polymer({
+            is: 'room-list',
+            getUsedPercent: function(used_seat, seat_capacity) {
+                return ((used_seat / seat_capacity) * 100).toFixed(2);
+            }
+        });
+    </script>
+</dom-module>

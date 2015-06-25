@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@appbar_size: 64px;
+
+html {
+	font-family: sans-serif;
+}
+
+#mainContainer {
+  text-align: center;
+  background-color: #FAFAFA;
+}
+
+.content {
+  display: inline-block;
+  width: @appbar_size * 8;
+  font-family: 'Nanum Gothic', serif;
+}
+
+@media (max-width: 720px) {
+	.content {
+		width: 80%;
+	}
+}

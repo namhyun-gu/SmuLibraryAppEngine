@@ -7,6 +7,10 @@ import utils
 import crawler
 from google.appengine.api import memcache, urlfetch
 
+class MainPageHandler(webapp2.RequestHandler):
+    def get(self):
+        self.redirect("static/index.html");
+
 class DataUpdateHandler(webapp2.RequestHandler):
     def get(self):
         # TODO: Support Custom Data
@@ -96,6 +100,7 @@ class DetailRequestHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
+    ('/', MainPageHandler),
     ('/cron/data_update', DataUpdateHandler),
     ('/test/data_update', TestDataUpdateHandler),
     ('/request/room_list', ListRequestHandler),

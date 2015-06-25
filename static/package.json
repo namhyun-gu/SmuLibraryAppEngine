@@ -1,0 +1,15 @@
+{
+  "name": "smu_library_web_app",
+  "version": "1.0.0",
+  "description": "Library web application for Sangmyung Univ.",
+  "main": "script/index.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Namhyun, Gu",
+  "license": "ISC"
+}

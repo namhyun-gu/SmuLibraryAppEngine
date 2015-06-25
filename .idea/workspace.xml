@@ -2,9 +2,193 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cb2b611-27df-4c84-9176-57e080fa250f" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\layout_3.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/script/app.ts" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\demo\x-key-aware.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\iron-a11y-keys-behavior.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\test\basic-test.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-a11y-keys-behavior\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\demo\simple-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\iron-button-state.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\iron-control-state.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\test\active-state.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\test\disabled-state.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\test\focused-state.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-behaviors\test\test-elements.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\classes\iron-flex-layout.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\classes\iron-shadow-flex-layout.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\demo\x-app.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-flex-layout\iron-flex-layout.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\demo\location.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\hero.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\iron-icon.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icon\test\iron-icon.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\av-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\communication-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\device-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\editor-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\hardware-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\hero.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\image-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\iron-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\maps-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\notification-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-icons\social-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\demo\svg-sample-icons.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\iron-iconset-svg.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-iconset-svg\test\iron-iconset-svg.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\hero.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\iron-meta.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\test\basic.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\iron-meta\test\iron-meta.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\demo\paper-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\demo\paper-radio-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\paper-button-behavior.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\paper-inky-focus-behavior.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\test\paper-button-behavior.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\test\paper-radio-button-behavior.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\test\test-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-behaviors\test\test-radio-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\paper-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-button\test\paper-button.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\paper-material.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-material\test\paper-material.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\hero.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\paper-ripple.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-ripple\test\paper-ripple.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\classes\global.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\classes\shadow-layout.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\classes\shadow.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\classes\typography.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\color.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\default-theme.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\demo-pages.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\demo.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\paper-styles-classes.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\paper-styles.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\shadow.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\paper-styles\typography.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\polymer\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\polymer\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\polymer\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\polymer\polymer-micro.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\polymer\polymer-mini.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\polymer\polymer.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\CustomElements.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\CustomElements.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\HTMLImports.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\HTMLImports.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\MutationObserver.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\MutationObserver.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\ShadowDOM.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\ShadowDOM.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\webcomponents-lite.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\webcomponents-lite.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\webcomponents.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\bower_components\webcomponentsjs\webcomponents.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\css\layout_seats.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\css\seats_position.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\css\seats_position.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\element\seat-element.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\layout.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\layout\layout_3.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\layout\layout_4.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\layout\layout_5.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-config.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-config.js.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-config.ts" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-controller.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-controller.js.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-controller.ts" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-drawer.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-drawer.js.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\template\script\seat-drawer.ts" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\tsd.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\typings\jquery\jquery.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programming\App Engine\workspace\smu_library\typings\tsd.d.ts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlers.py" afterPath="$PROJECT_DIR$/handlers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/layout.html" afterPath="$PROJECT_DIR$/template/layout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smu_library.iws" />
@@ -19,7 +203,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/smu_library$smu_library.coverage" NAME="smu_library Coverage Results" MODIFIED="1435146657584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/smu_library$smu_library.coverage" NAME="smu_library Coverage Results" MODIFIED="1435206510563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,21 +220,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/layout.html">
+      <file leaf-file-name="seat-element.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/element/seat-element.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.7352943">
+              <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/element/room-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.029411">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/app.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9451796">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="seat-drawer.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/script/seat-drawer.ts">
+        <entry file="file://$PROJECT_DIR$/static/script/seat-drawer.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -58,84 +272,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seat-config.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/script/seat-config.ts">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seat-controller.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/script/seat-controller.ts">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout_3.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/layout/layout_3.json">
+      <file leaf-file-name="app.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout_5.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/layout/layout_5.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.411764">
-              <caret line="266" column="24" selection-start-line="266" selection-start-column="24" selection-end-line="266" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="handlers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <element signature="e#45#59#0" expanded="true" />
+                <marker date="1435207810137" expanded="true" signature="97:508" placeholder="handlers:" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seat-element.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/element/seat-element.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8979206">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout_4.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/layout/layout_4.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -181,7 +345,6 @@
         <option value="$PROJECT_DIR$/template/javascript/layout_drawer.js" />
         <option value="$PROJECT_DIR$/template/javascript/layout_config.js" />
         <option value="$PROJECT_DIR$/template/javascript/seats-drawer.js" />
-        <option value="$PROJECT_DIR$/app.yaml" />
         <option value="$PROJECT_DIR$/template/script/seat-controller.js" />
         <option value="$PROJECT_DIR$/template/element/seat-element.html" />
         <option value="$PROJECT_DIR$/template/library_layout.html" />
@@ -194,7 +357,12 @@
         <option value="$PROJECT_DIR$/template/script/seat-drawer.ts" />
         <option value="$PROJECT_DIR$/template/script/seat-controller.ts" />
         <option value="$PROJECT_DIR$/template/layout/layout_5.json" />
+        <option value="$PROJECT_DIR$/static/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/app.yaml" />
         <option value="$PROJECT_DIR$/handlers.py" />
+        <option value="$PROJECT_DIR$/static/element/seat-element.html" />
+        <option value="$PROJECT_DIR$/static/element/room-list.html" />
+        <option value="$PROJECT_DIR$/static/css/app.less" />
       </list>
     </option>
   </component>
@@ -234,7 +402,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,7 +431,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,43 +445,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smu_library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smu_library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smu_library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smu_library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -331,16 +463,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seats_position.less" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -353,17 +481,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app.less" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -782,15 +914,16 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698768" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698768" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281075" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281075" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3281075" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21213749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21535982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25349087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3975364" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -800,7 +933,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34924078" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -822,6 +954,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1042,77 +1182,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58848614">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/script/seat-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.5310836">
-          <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/script/seat-drawer.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/script/seat-drawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17761989">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/layout_seats.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32126167">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/seats_position.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.294118">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/seats_position.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7161216">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
@@ -1123,78 +1200,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/layout.html">
+    <entry file="file://$PROJECT_DIR$/static/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        <state vertical-scroll-proportion="-11.029411">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/layout/layout_4.json">
+    <entry file="file://$PROJECT_DIR$/static/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/layout/layout_3.json">
+    <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/script/seat-config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/script/seat-drawer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1435207810137" expanded="true" signature="97:508" placeholder="handlers:" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/script/seat-controller.ts">
+    <entry file="file://$PROJECT_DIR$/static/bower_components/font-roboto/roboto.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/layout/layout_5.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.411764">
-          <caret line="266" column="24" selection-start-line="266" selection-start-column="24" selection-end-line="266" selection-end-column="24" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4884547">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#45#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/element/seat-element.html">
+    <entry file="file://$PROJECT_DIR$/static/element/seat-element.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8979206">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state vertical-scroll-proportion="-6.7352943">
+          <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/element/room-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.029411">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/script/seat-drawer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9451796">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding />
         </state>
       </provider>

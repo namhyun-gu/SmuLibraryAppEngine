@@ -7,12 +7,12 @@
  */
 function draw(index:number):void {
     var config:RoomModel = null;
-    if (index == 1) {
+    if (index == 0) {
+        config = new Room0();
+    } else if (index == 1) {
         config = new Room1();
-    } else if (index == 2) {
-        config = new Room2();
-    } else if (index == 6) {
-        config = new Room6();
+    } else if (index == 5) {
+        config = new Room5();
     }
 
     if (config != null) {

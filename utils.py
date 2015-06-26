@@ -27,6 +27,10 @@ class Util:
         return datetime.now(KST()).strftime('%Y-%m-%d %H:%M')
 
     @staticmethod
+    def get_time():
+        return datetime.now(KST()).strftime('%H:%M')
+
+    @staticmethod
     def to_json(data):
         return json.dumps(data, ensure_ascii=False, default=lambda o: o.__dict__)
 
@@ -55,8 +59,12 @@ class Util:
             seat_lists_data = json_object['seat_list']
             for seat_data in seat_lists_data:
                 seat_object = Seat()
-                seat_object.seat_number = seat_data['seatNumber']
+                seat_object.seat_number = seat_data['seat_number']
                 seat_object.is_available = seat_data['is_available']
+                try:
+                    seat_object.use_time = seat_data['use_time']
+                except KeyError:
+                    seat_object.use_time = None
                 seat_lists.append(seat_object)
 
             room_data = json_object['room_object']
@@ -72,6 +80,9 @@ class Util:
             room_detail_object.seat_list = seat_lists
             return room_detail_object
 
+    @staticmethod
+    def create_error_response(code, message):
+        return Util.to_json(Error(code, message))
 
 class Timer:
     start_time = None
@@ -89,56 +100,39 @@ class Timer:
 class ObserveService:
     observe_data = None
     observe_type = None
-    observe_room_index = None
+    observe_index = None
+    memcache_data = None
 
-    def __init__(self, observe_data, type, room_index=None):
+    def __init__(self, observe_data, type, index=None):
         self.observe_data = observe_data
         self.observe_type = type
-        self.observe_room_index = room_index
+        self.observe_index = index
+        self.memcache_data = memcache.get(keys.ROOM_KEY % self.observe_index)
+
+    def get_cache_list(self):
+        if self.memcache_data is None:
+            return None
+        return Util.from_json(self.memcache_data, RoomDetail).seat_list
 
     def observe(self):
-        if self.observe_type == crawler.RoomListCrawler:
-            memcache_data = memcache.get(keys.ROOM_LIST_KEY)
-            if memcache_data is None:
+        if self.observe_type == crawler.RoomDetailCrawler:
+            if self.observe_index is None:
                 return
-            room_list_object = Util.from_json(memcache_data, RoomList)
 
-            # logging.info(room_list_object)
+            cached_seat_list = self.get_cache_list()
+            if cached_seat_list is None:
+                return
 
-        elif self.observe_type == crawler.RoomDetailCrawler:
-            if self.observe_room_index is None:
-                return
-            memcache_data = memcache.get(keys.ROOM_KEY % self.observe_room_index)
-            if memcache_data is None:
-                return
-            observe_seat_list = Util.from_json(memcache_data, RoomDetail).seat_list
-            cached_seat_list = observe_seat_list
-            changed_seat_list = []
             for index in range(0, len(cached_seat_list)):
                 cached_seat = cached_seat_list[index]
                 observe_seat = self.observe_data.seat_list[index]
-                if cached_seat.__is_available != observe_seat.__is_available:
-                    changed_seat_list.append(observe_seat)
-            self._notify(changed_seat_list)
 
-    def _notify(self, dataset):
-        if not dataset:
-            return
-
-        if self.observe_type == crawler.RoomDetailCrawler:
-            change_available_seats = []
-            for seat in dataset:
-                if seat.__is_available:
-                    change_available_seats.append(seat)
-            logging.info(change_available_seats)
-
-
-class GCMService:
-    api_key = None
-    headers = None
-
-    def __init__(self, api_key):
-        self.api_key = api_key
-        self.headers = {
-            'Authorization': 'key=%s' % self.api_key,
-        }
+                if cached_seat.is_available != observe_seat.is_available:
+                    if observe_seat.is_available:
+                        observe_seat.use_time = None
+                        #TODO: Notify data changed to user (GCM or Mail)
+                elif observe_seat.is_available is False:
+                    if cached_seat.use_time is None:
+                        observe_seat.use_time = Util.get_time()
+                    else:
+                        observe_seat.use_time = cached_seat.use_time

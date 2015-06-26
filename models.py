@@ -73,6 +73,7 @@ class RoomDetail:
 
 class Seat:
     seat_number = 0
+    use_time = None
     is_available = False
 
     def number(self, number):
@@ -82,3 +83,11 @@ class Seat:
     def available(self, available):
         self.is_available = available
         return self
+
+class Error:
+    code = None
+    message = None
+
+    def __init__(self, code, message):
+        self.code = code
+        self.message = message

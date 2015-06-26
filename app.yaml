@@ -21,9 +21,6 @@ handlers:
 - url: /request/room_detail
   script: handlers.app
 
-- url: /test/data_update
-  script: handlers.app
-
 - url: /cron/data_update
   script: handlers.app
 

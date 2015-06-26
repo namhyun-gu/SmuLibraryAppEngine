@@ -3,7 +3,7 @@
 /**
  * Created by namhyun on 2015-06-22.
  */
-class Room1 implements RoomModel {
+class Room0 implements RoomModel {
     rowProperty:RowProperty;
     colProperty:ColProperty;
     seatSize:number;
@@ -39,7 +39,7 @@ class Room1 implements RoomModel {
     }
 }
 
-class Room2 implements RoomModel {
+class Room1 implements RoomModel {
     rowProperty:RowProperty;
     colProperty:ColProperty;
     seatSize:number;
@@ -83,7 +83,7 @@ class Room2 implements RoomModel {
     }
 }
 
-class Room6 implements RoomModel {
+class Room5 implements RoomModel {
     rowProperty:RowProperty;
     colProperty:ColProperty;
     seatSize:number;

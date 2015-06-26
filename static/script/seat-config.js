@@ -2,8 +2,8 @@
 /**
  * Created by namhyun on 2015-06-22.
  */
-var Room1 = (function () {
-    function Room1() {
+var Room0 = (function () {
+    function Room0() {
         this.seatSize = 52;
         var row_numbers = [];
         row_numbers.push([1, 16, 17, 32]);
@@ -24,10 +24,10 @@ var Room1 = (function () {
         this.colProperty.appendCol(col_numbers, col_sizes);
         this.entryMark = new EntryMark(1, 9, false);
     }
-    return Room1;
+    return Room0;
 })();
-var Room2 = (function () {
-    function Room2() {
+var Room1 = (function () {
+    function Room1() {
         this.seatSize = 208;
         var row_numbers = [];
         row_numbers.push([37, 70, 71, 104, 105, 140, 141, 176, 177, 208]);
@@ -56,10 +56,10 @@ var Room2 = (function () {
         this.colProperty.appendCol(col_numbers, col_sizes);
         this.entryMark = new EntryMark(2, 5, false);
     }
-    return Room2;
+    return Room1;
 })();
-var Room6 = (function () {
-    function Room6() {
+var Room5 = (function () {
+    function Room5() {
         this.seatSize = 84;
         var row_numbers = [];
         row_numbers.push([81, 80, 65, 64, 49, 48, 33, 32, 17, 16]);
@@ -80,6 +80,6 @@ var Room6 = (function () {
         this.colProperty.appendCol(col_numbers, col_sizes);
         this.entryMark = new EntryMark(11, 14, true);
     }
-    return Room6;
+    return Room5;
 })();
 //# sourceMappingURL=seat-config.js.map

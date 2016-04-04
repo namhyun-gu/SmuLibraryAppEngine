@@ -40,7 +40,7 @@
         </style>
         <template is="dom-repeat" items="{{data.room_list}}">
         	   <paper-material elevation="1">
-                    <div class="content" layout vertical>
+                    <div class="content" layout vertical onclick="itemClickEvent">
                         <span class="itemTitle">{{item.name}}</span>
                         <div class="itemSubTitle layout horizontal">
                             <span class="itemHightlight">{{item.used_seat}}</span>    
